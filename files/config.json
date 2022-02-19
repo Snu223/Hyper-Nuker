@@ -1,0 +1,21 @@
+{
+    "token": "OTM2Mzc3MDgzMTA0NDc3MTg0.YfMYJA.7dRnGv0_koKhVfJRlG8RX2vPqDM",
+    "prefixo": "hnk!",
+    "nomes": [],
+    "apagar mensagens": false,
+
+    "help": ["help", "ajuda"],
+    "spam": ["spam", "spamar", "flood", "floodar"],
+    "purge": ["purge", "clean", "clear", "limpar", "apagar"],
+    "create_channels": ["create_channels", "criar_canais"],
+    "create_roles": ["create_roles", "criar_cargos"],
+    "delete_channels": ["delete_channels", "excluir_canais"],
+    "delete_roles": ["delete_roles", "excluir_cargos"],
+    "ban_all": ["ban_all", "banir_todos"],
+    "nuke": ["nuke", "destruir"],
+    "self_purge": ["self_purge", "self_clear"],
+    "remake_channel": ["remake_channel", "recriar_canal", "refazer_canal"],
+    "set_activity": ["set_activity", "definir_atividade", "set_presence", "change_presence", "change_activity"],
+    "ip": ["ip", "checar_ip", "ip_checker"],
+    "token_checker": ["token_checker", "checar_token", "token"]
+}
