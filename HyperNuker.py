@@ -55,12 +55,17 @@ with open("files/config.json", "r") as file:
     PREFIXO = content["prefixo"] if content["prefixo"] != "" else "hnk!"
     APAGAR_MENSAGENS = content["apagar mensagens"]
 
-    if TOKEN == "":
-        print(f"{Fore.RED}[ERRO] Nenhuma token foi adicionada no arquivo \"config.json\"{Style.RESET_ALL}")
-        exit(0)
+    try:
+        if TOKEN == "":
+            print(f"{Fore.RED}[ERRO] Nenhuma token foi adicionada no arquivo \"config.json\"{Style.RESET_ALL}")
+            exit(0)
 
-    elif get("https://discordapp.com/api/v9/users/@me", headers={"Authorization": TOKEN}).status != 200:
-        print(f"{Fore.RED}[ERRO] token inválida{Style.RESET_ALL}")
+        elif get("https://discordapp.com/api/v9/users/@me", headers={"Authorization": TOKEN}).status_code != 200:
+            print(f"{Fore.RED}[ERRO] token inválida{Style.RESET_ALL}")
+            exit(0)
+
+    except Exception:
+        print(f"{Fore.RED}[ERRO] Você tem certeza que está conectado a internet?{Style.RESET_ALL}")
         exit(0)
 
 client = commands.Bot(
