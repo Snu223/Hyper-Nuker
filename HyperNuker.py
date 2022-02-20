@@ -43,8 +43,10 @@ try:
     from platform import system as os
 
 except Exception:
-    print(f"{Fore.RED}[ERRO] não foi possível importar as bibliotecas necessárias... instalando")
+    print(f"[ERRO] não foi possível importar as bibliotecas necessárias...")
     os.system(f"{sys.executable} -m pip install -r requirements.txt")
+    os.system(f"{sys.executable} {sys.argv[0]}")
+    exit(0)
 
 
 DEBUG = True
