@@ -80,13 +80,13 @@ class Extra(commands.Cog):
         cmd = ctx.invoked_with.lower()
         type = type.lower()
 
-        if type in ["play", "playing", "jogar", "jogando"]:
+        if type == "play":
             activity = Activity(type=ActivityType.playing, name=name, details=details)
 
-        elif type in ["listen", "listening", "escutar", "escutando"]:
+        elif type == "listen":
             activity = Activity(type=ActivityType.listening, name=name, details=details)
 
-        elif type in ["watch", "watching", "assistir", "assistindo"]:
+        elif type == "watch":
             activity = Activity(type=ActivityType.watching, name=name, details=details)
 
         else:
