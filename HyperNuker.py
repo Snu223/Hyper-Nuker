@@ -25,14 +25,26 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from discord.ext import commands
-from files.commands import raid, extra
-from requests import get
-from json import loads
-from colorama import Fore, Style
-from datetime import datetime
-from os import system
-from platform import system as os
+import os
+import sys
+
+
+if "discord.py" in sys.modules:
+    os.system(f"{sys.executable} -m pip uninstall discord.py")
+
+try:
+    from discord.ext import commands
+    from files.commands import raid, extra
+    from requests import get
+    from json import loads
+    from colorama import Fore, Style
+    from datetime import datetime
+    from os import system
+    from platform import system as os
+
+except Exception:
+    print(f"{Fore.RED}[ERRO] não foi possível importar as bibliotecas necessárias... instalando")
+    os.system(f"{sys.executable} -m pip install -r requirements.txt")
 
 
 DEBUG = True
