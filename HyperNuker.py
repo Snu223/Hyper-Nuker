@@ -289,7 +289,7 @@ async def help(ctx, *, cmd=""):
         f"Comando: **{cmd}**\n" \
         f"Apelido(s): {apelidos}\n" \
         f"O que faz: muda a sua atividade atual no discord\n" \
-        f"tipos de modo: [\"watch\", \"play\", \"listen\"]"
+        f"tipos de modo: [\"watch\", \"play\", \"listen\"]\n" \
         f"Como Usar: {PREFIXO}{cmd} \"modo\" \"ação\" \"descrição\"\n" \
         f"Exemplo: {PREFIXO}{cmd} watch \"Hyper Nuker\" \"O melhor\""
 
