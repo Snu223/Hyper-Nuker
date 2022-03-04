@@ -321,7 +321,7 @@ async def help(ctx, *, cmd=""):
         await ctx.send(content=msg)
 
     else:
-        image = "https://media.discordapp.net/attachments/945162915697283072/945172644821602324/help_menu.png?width=564&height=730"
+        image = "https://ibb.co/0yR98hF""
         msg = f"\n**OBS**: use {PREFIXO}{command} \"comando\" para ver mais informações sobre algum comando"
         await ctx.send(content=image) 
         await ctx.send(content=msg)
