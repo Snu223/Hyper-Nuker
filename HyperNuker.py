@@ -321,7 +321,7 @@ async def help(ctx, *, cmd=""):
         await ctx.send(content=msg)
 
     else:
-        image = "https://ibb.co/0yR98hF""
+        image = "https://ibb.co/0yR98hF"
         msg = f"\n**OBS**: use {PREFIXO}{command} \"comando\" para ver mais informações sobre algum comando"
         await ctx.send(content=image) 
         await ctx.send(content=msg)
